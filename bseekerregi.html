@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+
+.back
+ {
+
+    background-image: url(https://images.pexels.com/photos/132197/pexels-photo-132197.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); 
+    max-width: 100%;
+    max-height: 100%;
+    
+
+ }
+        .contents
+        {
+            
+            text-align: center;
+            font-family: 'Open Sans', sans-serif; 
+            /* padding: 10% 0;  */
+          height: 620px;
+          width: 500px;
+          border: 3px solid black;
+           border-radius: 55px;
+          background-color: blanchedalmond;
+            margin: 0 auto; 
+           margin-left: 370px; 
+           margin-top: 10px; 
+        
+        }
+        .fc input
+        {
+            width: 300;
+           
+            font-family: 'Open Sans', sans-serif; 
+            box-sizing: border-box;
+            padding: 7px 43px;
+            outline: 23;
+            color: black
+        }
+   
+    
+        /* .back
+        {
+            background-image: url(https://images.pexels.com/photos/132197/pexels-photo-132197.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); 
+           max-width: 14499px ;
+           max-height: 1300px;
+            
+           
+            
+            
+        } */
+
+        
+
+    </style>
+</head>
+<body>
+  
+   <div class="back">
+       
+   
+   <div class="contents">
+
+
+    <form method="POST" action="bseekerregi.php" onsubmit="return Validate()" id="form">
+        <h2 style = "text-align: center;">Registration Form</h2>
+        
+        <div class="fc">
+            <label for="name"> Username: </label> <br>
+            <input type="text" name="Username" id="name" placeholder="At least 4 Charecter" required> </input> <br>
+            <span id="u" class="font-weight:bold" style="color: red   ;"></span>
+         <br> 
+     
+
+        </div>
+
+        <div class="fc">
+            <label for="pass"> Password: </label><br>
+            <input type="password" name="Password"  id= "pass" placeholder="Must include special charecter"  required> </input>  <br>
+            <span id="p" class="font-weight:bold" style="color: red   ;"></span> <br>
+        </div>
+        
+        <div class="fc">
+            <label for="repass">Confirm Password</label><br>
+            <input type="password" name="repass" id="repass" placeholder="" required></input> <br>
+            <span id="r" class="font-weight:bold" style="color: red   ;"></span> <br>
+        </div>
+      
+        
+        <div class="fc">
+            <label for="email">email:&nbsp &nbsp &nbsp </label><br>
+            <input type="email" name="Email" id="email" placeholder="someone@gmail.com" required></input>
+           
+        </div>
+       
+        <br> 
+       
+        <div class="fc">
+            <label for="phn">Mobile No</label><br>
+            <input type="text"  placeholder="01xxxxxxxxx"  name="P" id="Phone" required></input>
+              
+        </div>
+            <br>
+        <div class="fc">
+            <label for="Bloodgroup">Blood Group</label><br>
+            <input type="text"  placeholder="B+"  name="Bg" id="Bg" required></input>
+              
+        </div>
+        <br>
+        <div class="fc">
+            <label for="Location">Address</label><br>
+            <input type="text"  placeholder=""  name="Address" id="Address" required></input>
+              
+        </div>
+        <div id="errpr">
+
+        </div>
+        
+       
+        <br> <br>
+        
+             <!-- <button class="btn" type="submit" name="Register">Register</button> &nbsp -->
+             <!-- <input type="submit" name="Registrartion "  > -->
+             <button class="btn" type="submit">Submit</button> &nbsp&nbsp&nbsp
+             <!-- <a  class = "btn" type="submit"  href="login.html" onclick="Validate()">Register</a> -->
+             Already Registerd? &nbsp &nbsp
+             <a class="btn"  href="beclog.html"> Log in </a>
+             
+          
+      
+
+        </form>
+
+   </div>
+
+   </div>
+
+  <script>
+
+                function Validate()
+                 {
+                   
+                    let uname = document.getElementById('name').value;
+                    let passw = document.getElementById('pass').value;
+                    let repassw = document.getElementById('repass').value;
+                    //  alert(uname.length);
+                    
+                     if(passw.length<6)
+                     {
+                         
+                         let c  = passw.length;
+                        //  alert("Not valited");
+                        
+                         document.getElementById('p').innerHTML =  " Please enter at least 6 charecter" ;
+                         return false;
+                     }
+                    //  if(passw!=repassw)
+                    // {
+                    //     // alert("Not validate");
+                    //     document.getElementById('r').innerHTML =  "Password Not matched" ;
+                    //     return false;
+                    // }
+                    // else if(passw==repassw)
+                    // {
+                    //     alert("Validate");
+                    // }
+
+                    
+                    
+
+                     let format = /[!@#$ %^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+                         if(!format. test(passw)){
+                            
+                            // alert("ffg");
+                            // return true;
+                            
+                         
+                            
+
+                               
+                                document.getElementById('p').innerHTML =  "Password must have special charecter" ;
+                                // alert("ff");
+                                return false;
+                            }
+                    
+                           
+
+                        //  if(passw!=repassw)
+                        //  {
+                        //     document.getElementById('r').innerHTML =  "input special charecter" ;
+                        //  }   
+                    //   if((document.getElementById('pass').value)!=(document.getElementById('repass').value))
+                    //   {
+                    //     document.getElementById('r').innerHTML =  "input special charecter" ;
+                    //     alert("YES");
+                    //   }
+                    //   else
+                    //   {
+                    //       alert("NO");
+                    //   }
+
+                    if(passw!=repassw)
+                    {
+                        // alert("Not validate");
+                        document.getElementById('r').innerHTML =  "Password Not matched" ;
+                        return false;
+                    }
+                    // else if(passw==repassw)
+                    // {
+                    //     alert("Validate");
+                    // }
+                    }
+                           
+
+                 
+            
+    
+      
+            
+
+             </script>
+   
+     
+</body>
+</html>

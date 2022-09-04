@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Style.css">
+
+
+    <style>
+
+/* *
+{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDZnBQmhM5S52vxxqOgXS5gLc1U6I_bvTXCg&usqp=CAU);
+} */
+
+
+.Login_Page
+{
+    
+    background-image: url(https://images.pexels.com/photos/132197/pexels-photo-132197.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); 
+    max-width: 100%;
+    max-height: 100%;
+   
+    
+    /* padding : 25px; */
+    /* margin-left: 290px; */
+    /* margin-top: 90px; */
+    margin: auto;
+    
+   outline: 12px solid cyan;
+   border: 20px solid black;
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;
+    padding: 16% 0;  
+   background-color: silver;
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;
+   
+   
+
+}
+.btn
+        {
+            text-align: center;
+          
+            
+            box-sizing: border-box;
+            border-radius: 12px;
+        }
+
+ /* .Login_Page input{
+
+     
+    padding : 12px 70px;
+} 
+        */
+
+ 
+
+
+    </style>
+</head>
+
+<body>
+    <div class="Login_Page">
+    <form method="POST" action= "bdonor.php">
+        
+            <h2>Log in here</h2>  
+            <label for="Login">Username</label>&nbsp &nbsp &nbsp &nbsp
+            <input type="text" name="Email" required> </input> <br> <br> 
+            <label for="Password">Password</label>&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;
+            <input type="password" name="Password" required> </input> <br><br>
+    
+            <button class="btn" type="submit">Login </button> &nbsp;&nbsp;
+            <a  class = "btn" type="button" href="index.php">Go to Homepage</a>
+            <!-- <button class="btn">Register </button> -->
+            
+
+            </form>
+    
+        </div>
+
+    
+
+    </div>
+    
+</body>
+</html>

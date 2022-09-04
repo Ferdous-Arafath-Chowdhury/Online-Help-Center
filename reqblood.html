@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request For Blood</title>
+
+
+<style>
+
+    
+.contents
+        {
+            
+            text-align: center;
+            font-family: 'Open Sans', sans-serif; 
+            /* padding: 10% 0;  */
+          height: 480px;
+          width: 500px;
+          border: 3px solid black;
+           border-radius: 55px;
+          background-color: forestgreen;
+            margin: 0 auto; 
+           margin-left: 370px; 
+           margin-top: 10px; 
+        
+        }
+        .fc input
+        {
+            width: 300;
+           
+            font-family: 'Open Sans', sans-serif; 
+            box-sizing: border-box;
+            padding: 7px 43px;
+            outline: 23;
+            color: black
+        }
+</style>
+</head>
+<body>
+    <form method="POST" action="reqblood.php" onsubmit="return Validate() ">
+
+        <div class="contents">
+
+  
+
+        <div>
+            <label for="name"> Name: </label> <br>
+            <input type="text" name="Username" id="name" placeholder="" required> </input> <br>
+            <span id="u" class="font-weight:bold" style="color: red   ;"></span>
+         <br> 
+     
+
+        </div>
+
+        
+        <div>
+            <label for="email">email:&nbsp &nbsp &nbsp </label><br>
+            <input type="email" name="Email" id="email" placeholder="someone@gmail.com" required></input>
+           
+        </div>
+       
+        <br> 
+       
+        <div>
+            <label for="phn">Mobile No</label><br>
+            <input type="text"  placeholder="01xxxxxxxxx"  name="P" id="Phone" required></input>
+              
+        </div>
+            <br>
+        <div>
+            <label for="Bloodgroup">Blood Group</label><br>
+            <input type="text"  placeholder="B+"  name="Bg" id="Bg" required></input>
+              
+        </div>
+        <br>
+        <label for=""> Having any serious Disease</label> <br>
+
+            <select name="Disease">
+              <option value="Yes">YES</option>
+              <option value="No">NO</option>
+              
+           
+            </select>
+            <br> <br>
+        <div>
+            <label for="wight" > Current Weight</label><br>
+            <input type="text"  placeholder=""  name="Weight" id="Weight" required></input> <br>
+            <span id="w" class="font-weight:bold" style="color: red   ;"></span>
+              
+        </div>
+        <br>
+        <div>
+            <label for="Amount" > Amount of Blood</label><br>
+            <input type="text"  placeholder=""  name="Amount" id="Amount" required></input> <br>
+            
+              
+        </div>
+        <br>
+        <button class="btn" type="submit">Submit</button> <br><br>
+        <a href="index.php">Go To Homepage</a>
+        <div id="errpr">
+
+        </div>
+
+
+    </div>
+
+    </form>
+
+    <script>
+         function Validate()
+                 {
+                   
+                    let weight = document.getElementById('Weight').value;
+                    if(weight < 45)
+                    {
+                        document.getElementById('w').innerHTML =  "You are not eligeble for blood donation" ;
+                         return false;
+                    }
+                 }
+    </script>
+</body>
+</html>
